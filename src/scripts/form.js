@@ -48,7 +48,7 @@ const form = {
 
     // 2. Attach event listener to button in form
     // submitButton.addEventListener("click", this.handleAddNewNews)
-    submitButton.addEventListener("click", console.log("New interest button "))
+    submitButton.addEventListener("click", this.handleAddNewInterest)
 
     // 3. Append the HTML form to the DOM
     //Notice that I have added an article element to my index.html with the class "form".
@@ -60,7 +60,7 @@ const form = {
     // FormFragment.appendChild(foodTypeField)
     FormFragment.appendChild(submitButton)
 
-    let formArticle = document.querySelector("#formsPlaceholder")
+    let formArticle = document.querySelector("#forms")
     formArticle.appendChild(FormFragment)
 
 },
@@ -69,6 +69,7 @@ const form = {
 handleAddNewInterest (event) {
     // 1. Get user input that user entered
     let interestName = document.querySelector("#interest__title").value
+    console.log("interestName")
     console.log(interestName)
     // 2. Create a new object with the same structure we have been using throughout the application to represent a news item:
     // {
