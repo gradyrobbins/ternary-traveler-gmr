@@ -34,9 +34,9 @@ const eventListeners2 = {
             saveInterestsButton.addEventListener("click", () => {
 
                 console.log("click saveInterestsButton")
-                form.handleAddNewInterest()
+                // form.handleAddNewInterest()
                 // form.handleinterestName();
-                // document.getElementById("x__title").value = "";
+                document.getElementById("interest__title").value = "";
             }
             );
 
