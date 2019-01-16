@@ -21,25 +21,7 @@ import newsList from "./newsList"
 
 
 const forms2 = {
-    //using innerHTML does not allow for adding event listener on this form.
-    // renderNewsForm() {
-
-    //     return `
-    //     <fieldset class="newsField">
-    //     <label for="newsTitle">Title</label>
-    //     <input required type="text" id="newsTitle">
-    //     </fieldset>
-    //     <fieldset class="newsField">
-    //     <label for="newsContent">Synopsis</label>
-    //     <input required type="text" id="newsContent"></input>
-    //     </fieldset>
-    //     <fieldset class="newsField">
-    //     <label for="newsURL">URL</label>
-    //     <input required type="text" id="newsURL"></input>
-    //     </fieldset>
-    //     <button id="saveNewsButton">Save this Entry</button>
-    //     `
-    // },
+    
 
     renderNewsForm2() {
 

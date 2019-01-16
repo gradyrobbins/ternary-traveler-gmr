@@ -79,6 +79,15 @@ const dataCollection2 = {
         .then(response => console.log(response))
       },
 
+      getAllInterests() {
+        return fetch("http://localhost:8088/interests")
+        .then(response => response.json())
+        .then(response => console.log(response))
+      },
+
+
+
+
       postNewtask(newtaskToSave) {
         return fetch("http://localhost:8088/tasks", {
           method: "POST",

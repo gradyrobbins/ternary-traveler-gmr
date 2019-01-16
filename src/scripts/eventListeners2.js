@@ -3,7 +3,7 @@
 // purpose: build and export an object with methods allowing for eventlisteners.
 
 
-import forms2 from "./forms2"
+// import forms2 from "./forms2"
 import dataCollection2 from "./dataCollection2"
 
 
@@ -15,7 +15,9 @@ const eventListeners2 = {
 
         let formsPlaceholder = document.getElementById("formsPlaceholder");
         formsPlaceholder.addEventListener("click", () => {
-            forms2.renderNewsForm2()}
+            console.log("click formsPlaceholder")
+            // forms2.renderNewsForm2()
+        }
         );
     },
 
