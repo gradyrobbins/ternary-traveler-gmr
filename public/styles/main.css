@@ -3,6 +3,13 @@
     border: 1px solid black;
     padding: 20px;
     margin: 20px;
+}
+
+#output-container {
+    background-color: burlywood;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
 };
 
 
