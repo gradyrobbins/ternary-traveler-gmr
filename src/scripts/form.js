@@ -73,7 +73,7 @@ handleAddNewInterest (event) {
     // 1. Get user input that user entered
     let interestName = document.querySelector("#interest__title").value
     // console.log("interestName")
-    console.log(interestName)
+    // console.log(interestName)
     // 2. Create a new object with the same structure we have been using throughout the application to represent a news item:
     // {
       //   name: "user input name",
@@ -85,11 +85,10 @@ handleAddNewInterest (event) {
     let newInterest = {
         name: interestName,
         // url: inputNewsurl,
-      //   url: inputNewsurl
       }
-      console.log("newInterest as object " , newInterest)
+    //   console.log("newInterest as object " , newInterest)
     // 3. Call the method(postnewNews) with the fetch request to POST to the API and pass it the object we created in the previous step
-      dataCollection2.postNewInterest(newInterest);
+      dataCollection2.postNewInterest(newInterest)
       eventListeners2.clearForm();
     // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
 }
