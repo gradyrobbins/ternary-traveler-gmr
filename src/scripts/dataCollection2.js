@@ -1,58 +1,46 @@
 // Grady
 // Grab some data
 const dataCollection2 = {
-    //********* USERS TABLE *********//
-    // Grab all user data
-    // soManyFriend() {
-    //   return fetch("http://localhost:8088/users")
-    //   .then(response => response.json())
-    //   // .then(response => {
-    //   //   // WORKS
-    //   //   console.log(response)
-    //   // })
-    // },
-    //***** TEST *****/
-    // ADD USER
-    // yayNewPal(newUser) {
-    //   return fetch("http://localhost:8088/users", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify(newUser)
-    //   })
-    // },
-    //News feature- gmr
-    // getAllNews() {
-    //   return fetch("http://localhost:8088/articles")
-    //   .then(response => response.json())
-    //   // .then(response => {
-    //   // //   WORKS
-    //   //   console.log("articles endpoint: " + response)
-    //   // })
-    // },
+  
+  // FETCH CALLS
+    getAllPlaces() {
+      return fetch("http://localhost:8088/places")
+      .then(response => response.json())
+      .then(response => console.log(response))
+    },
 
-    postNewsEntry(newNewsEntry) {
-      return fetch("http://localhost:8088/articles", {
+    getAllInterests() {
+      return fetch("http://localhost:8088/interests")
+      .then(response => response.json())
+      .then(response => console.log(response))
+    },
+
+
+
+    //POST
+    postNewInterest(newInterestToSave) {
+      return fetch("http://localhost:8088/interests", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(newNewsEntry)
+        body: JSON.stringify(newInterestToSave)
       })
-    },
-  // *** EXPORT to registration.js (eventually forms.js) ***
+    }
+
+
 
     //***** TEST *****/
     // DELETE NEWS item
-    deleteNewsItem(id) {
-      return fetch(`http://localhost:8088/articles/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-    },
+    // deleteNewsItem(id) {
+    //   return fetch(`http://localhost:8088/articles/${id}`, {
+    //     method: "DELETE",
+    //     headers: {
+    //       "Content-Type": "application/json"
+    //     }
+    //   })
+    // },
+
     //***** TEST *****/
     // EDIT USER - 2 STAGES
 
@@ -72,22 +60,11 @@ const dataCollection2 = {
     //   })
     // },
 
-    //TASK FETCH CALLS
-      getAllPlaces() {
-        return fetch("http://localhost:8088/places")
-        .then(response => response.json())
-        .then(response => console.log(response))
-      },
 
-      postNewtask(newtaskToSave) {
-        return fetch("http://localhost:8088/tasks", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify(newtaskToSave)
-        })
-      }
+
+
+
+
   }
 
   export default dataCollection2
