@@ -7,7 +7,7 @@ import eventListeners2 from "./eventListeners2"
 // import newsList from "./newsList"
 
 
-eventListeners2.newsClick();
+eventListeners2.renderForm();
 // newsList.newsify()
 
 dataCollection2.getAllPlaces();

@@ -4,6 +4,7 @@
 
 
 // import forms2 from "./forms2"
+import form from "./form"
 import dataCollection2 from "./dataCollection2"
 
 
@@ -11,12 +12,13 @@ import dataCollection2 from "./dataCollection2"
 const eventListeners2 = {
 
     // when user clicks on "News" in NavBar, execute a function
-    newsClick() {
+    renderForm() {
 
         let formsPlaceholder = document.getElementById("formsPlaceholder");
         formsPlaceholder.addEventListener("click", () => {
             console.log("click formsPlaceholder")
             // forms2.renderNewsForm2()
+            form.renderForm();
         }
         );
     },
