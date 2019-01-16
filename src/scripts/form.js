@@ -42,13 +42,13 @@ const form = {
 
 
     let submitButton = document.createElement("button")
-        submitButton.setAttribute("id", "saveNewsButton")
+        submitButton.setAttribute("id", "saveInterestsButton")
 
     submitButton.textContent = "Add New Interest"
 
     // 2. Attach event listener to button in form
     // submitButton.addEventListener("click", this.handleAddNewNews)
-    submitButton.addEventListener("click", console.log("submit new interest button clicked"))
+    submitButton.addEventListener("click", console.log("New interest button "))
 
     // 3. Append the HTML form to the DOM
     //Notice that I have added an article element to my index.html with the class "form".
@@ -63,7 +63,12 @@ const form = {
     let formArticle = document.querySelector("#formsPlaceholder")
     formArticle.appendChild(FormFragment)
 
-}
+},
+
+
+
+
+
 
 }
 

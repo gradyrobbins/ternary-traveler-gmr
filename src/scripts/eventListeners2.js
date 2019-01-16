@@ -24,8 +24,27 @@ const eventListeners2 = {
     },
 
     // deleteNewsButton() {
-    //     let deleteNewsButton = document.getElementById()
-    // }
-}
+        //     let deleteNewsButton = document.getElementById()
+        // }
 
-export default eventListeners2
+
+        clearForm() {
+            // console.log("save news button clicked");
+            let saveInterestsButton = document.getElementById("saveInterestsButton");
+            saveInterestsButton.addEventListener("click", () => {
+
+                console.log("click saveInterestsButton")
+                // forms2.renderNewsForm2()
+                // form.renderForm();
+                document.getElementById("x__title").value = "";
+            }
+            );
+
+            // document.getElementById("news__url").value = "";
+            //   document.getElementById("newsURL").value = "";
+
+            // return
+        },
+    }
+
+    export default eventListeners2
