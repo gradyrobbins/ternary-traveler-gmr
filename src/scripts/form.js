@@ -31,11 +31,11 @@ const form = {
 
         let NameLabel = document.createElement("label")
             NameLabel.textContent = "Title"
-            NameLabel.setAttribute("for", "x__title")
+            NameLabel.setAttribute("for", "interest__title")
 
         let NameInput = document.createElement("input")
-            NameInput.setAttribute("id", "x__title")
-            NameInput.setAttribute("name", "x__title")
+            NameInput.setAttribute("id", "interest__title")
+            NameInput.setAttribute("name", "interest__title")
 
     NameField.appendChild(NameLabel)
     NameField.appendChild(NameInput)
@@ -65,9 +65,21 @@ const form = {
 
 },
 
+// This module will also contain the function that executes when the button in the form is clicked. When the button in the form is clicked, the following will happen:
+handleAddNewInterest (event) {
+    // 1. Get user input that user entered
+    let interestName = document.querySelector("#interest__title").value
+    console.log(interestName)
+    // 2. Create a new object with the same structure we have been using throughout the application to represent a news item:
+    // {
+      //   name: "user input name",
+      //   synopsis: "user input synopsis",
+      //   url: "user input url"
+    // }
+    // 3. Call the method(postnewNews) with the fetch request to POST to the API and pass it the object we created in the previous step
 
-
-
+    // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
+}
 
 
 }
