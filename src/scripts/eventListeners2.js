@@ -5,7 +5,7 @@
 
 // import forms2 from "./forms2"
 import form from "./form"
-import dataCollection2 from "./dataCollection2"
+// import dataManager from "./dataManager"
 
 
 
