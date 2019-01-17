@@ -3,7 +3,6 @@
 // purpose: build and export an object with methods allowing for eventlisteners.
 
 
-// import forms2 from "./forms2"
 import form from "./form"
 // import dataManager from "./dataManager"
 
@@ -16,10 +15,9 @@ const eventListeners2 = {
 
         let formsPlaceholder = document.getElementById("formsPlaceholder");
         formsPlaceholder.addEventListener("click", () => {
-            console.log("click formsPlaceholder")
-            // forms2.renderNewsForm2()
+            // console.log("click formsPlaceholder")
             form.renderForm();
-        }
+            }
         );
     },
 
@@ -29,22 +27,15 @@ const eventListeners2 = {
 
 
         clearForm() {
-            // console.log("save news button clicked");
-            let saveInterestsButton = document.getElementById("saveInterestsButton");
-            saveInterestsButton.addEventListener("click", () => {
 
-                console.log("click saveInterestsButton")
-                // form.handleAddNewInterest()
-                // form.handleinterestName();
-                document.getElementById("interest__title").value = "";
+               return document.getElementById("interest__title").value = "";
             }
-            );
 
             // document.getElementById("news__url").value = "";
             //   document.getElementById("newsURL").value = "";
 
             // return
-        },
+        // },
     }
 
     export default eventListeners2

@@ -27,13 +27,13 @@ const news = {
       let newsArticle = document.createElement("article")
 
       let newsTitle = document.createElement("h3")
-      newsTitle.textContent = newsObject.title
+      newsTitle.textContent = newsObject.name
 
     //   let newsSynopsis = document.createElement("p")
     //   newsSynopsis.textContent = newsObject.synopsis
 
-      let newsURL = document.createElement("p")
-      newsURL.textContent = newsObject.url
+      // let newsURL = document.createElement("p")
+      // newsURL.textContent = newsObject.url
 
 
       let deleteNewsButton = document.createElement("button")
@@ -54,7 +54,7 @@ const news = {
 
     newsArticle.appendChild(newsTitle);
     //   newsArticle.appendChild(newsSynopsis)
-    newsArticle.appendChild(newsURL)
+    // newsArticle.appendChild(newsURL)
     newsArticle.appendChild(deleteNewsButton)
 
 

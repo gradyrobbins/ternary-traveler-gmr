@@ -9,8 +9,8 @@ import news from "./news"
 const newsList = {
   newsify(){
     // 1. Get data
-    // The getAllNews method will do a fetch and return a promise. This call will return the data from the API in the response.
-    dataManager.getAllNews()
+    // The getAllInterests method will do a fetch and return a promise. This call will return the data from the API in the response.
+    dataManager.getAllInterests()
     .then(allNews => {
 
       // An empty document fragment

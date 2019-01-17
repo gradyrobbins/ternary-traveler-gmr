@@ -50,8 +50,23 @@ const form = {
     submitButton.textContent = "Add New Interest"
 
     // 2. Attach event listener to button in form
-    // submitButton.addEventListener("click", this.handleAddNewNews)
     submitButton.addEventListener("click", this.handleAddNewInterest)
+
+//  clearForm() {
+//         // console.log("save news button clicked");
+//         let saveInterestsButton = document.getElementById("saveInterestsButton");
+//         saveInterestsButton.addEventListener("click", () => {
+
+//             console.log("click saveInterestsButton")
+//             // form.handleAddNewInterest()
+//             // form.handleinterestName();
+//             document.getElementById("interest__title").value = "";
+//         }
+//         );
+
+//     }
+
+
 
     // 3. Append the HTML form to the DOM
     //Notice that I have added an article element to my index.html with the class "form".
@@ -91,6 +106,12 @@ handleAddNewInterest (event) {
       dataManager.postNewInterest(newInterest)
       eventListeners2.clearForm();
     // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
+
+
+
+    eventListeners2.clearForm()
+    // newsList.newsify()
+
 }
 
 
