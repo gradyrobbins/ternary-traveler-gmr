@@ -28,14 +28,9 @@ const eventListeners2 = {
 
         clearForm() {
 
-               return document.getElementById("interest__title").value = "";
+               return document.getElementById("interest__name__input").value = "";
             }
 
-            // document.getElementById("news__url").value = "";
-            //   document.getElementById("newsURL").value = "";
-
-            // return
-        // },
     }
 
     export default eventListeners2

@@ -36,26 +36,26 @@ const news = {
       // newsURL.textContent = newsObject.url
 
 
-      let deleteNewsButton = document.createElement("button")
-      deleteNewsButton.setAttribute("id", `deleteNewsid#--${newsObject.id}`)
-      deleteNewsButton.textContent = "Delete this News article"
+      // let deleteNewsButton = document.createElement("button")
+      // deleteNewsButton.setAttribute("id", `deleteNewsid#--${newsObject.id}`)
+      // deleteNewsButton.textContent = "Delete this News article"
 
 
-      deleteNewsButton.addEventListener("click", () => {
-        //   console.log("delete button clicked")
-          let newsId = event.target.id.split("--")[1]
-          dataManager.deleteNewsItem(newsId)
-          .then(response => {
-                newsList.newsify()
-              })
+      // deleteNewsButton.addEventListener("click", () => {
+      //   //   console.log("delete button clicked")
+      //     let newsId = event.target.id.split("--")[1]
+      //     dataManager.deleteNewsItem(newsId)
+      //     .then(response => {
+      //           newsList.newsify()
+      //         })
 
 
-            })
+      //       })
 
     newsArticle.appendChild(newsTitle);
     //   newsArticle.appendChild(newsSynopsis)
     // newsArticle.appendChild(newsURL)
-    newsArticle.appendChild(deleteNewsButton)
+    // newsArticle.appendChild(deleteNewsButton)
 
 
     return newsArticle

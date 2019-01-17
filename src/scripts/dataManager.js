@@ -6,13 +6,13 @@ const dataManager = {
       getAllPlaces() {
         return fetch("http://localhost:8088/places")
         .then(response => response.json())
-        .then(response => console.log(response))
+        // .then(response => console.log(response))
       },
 
       getAllInterests() {
         return fetch("http://localhost:8088/interests")
         .then(response => response.json())
-        .then(response => console.log(response))
+        // .then(response => console.log(response))
       },
 
 
