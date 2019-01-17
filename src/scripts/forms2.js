@@ -1,4 +1,4 @@
-import dataCollection2 from "./dataCollection2";
+import dataManager from "./dataManager";
 import newsList from "./newsList"
 //author: Grady R.
 // purpose: Forms module, object with methods to retrieve misc. forms.
@@ -21,7 +21,7 @@ import newsList from "./newsList"
 
 
 const forms2 = {
-    
+
 
     renderNewsForm2() {
 
@@ -114,7 +114,7 @@ const forms2 = {
     // 3. Call the method(postnewNews) with the fetch request to POST to the API and pass it the object we created in the previous step
 
     // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
-    dataCollection2.postNewsEntry(newNews)
+    dataManager.postNewsEntry(newNews)
 
     forms2.clearForm()
     newsList.newsify()
