@@ -2,7 +2,7 @@
 // This component will get the data, build the HTML from the data and append it to the DOM.
 
 // To get the data, we will use the foodCollection component.
-import dataCollection2 from "./dataCollection2"
+import dataManager from "./dataManager"
 // To build the HTML for each object in the array of food(which is what the data coming from the API becomes once we parse it), we will use the food component.
 import news from "./news"
 
@@ -10,7 +10,7 @@ const newsList = {
   newsify(){
     // 1. Get data
     // The getAllNews method will do a fetch and return a promise. This call will return the data from the API in the response.
-    dataCollection2.getAllNews()
+    dataManager.getAllNews()
     .then(allNews => {
 
       // An empty document fragment

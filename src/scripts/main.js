@@ -1,7 +1,7 @@
 console.log("Hello main.js")
 
 
-import dataCollection2 from "./dataCollection2";
+import dataManager from "./dataManager";
 import eventListeners2 from "./eventListeners2"
 // import form from "./form"
 // import newsList from "./newsList"
@@ -10,12 +10,12 @@ import eventListeners2 from "./eventListeners2"
 eventListeners2.renderForm();
 // newsList.newsify()
 
-dataCollection2.getAllPlaces();
-dataCollection2.getAllInterests();
+dataManager.getAllPlaces();
+dataManager.getAllInterests();
 
 
 // var myHonda = {color: "red", wheels: 4, engine: {cylinders: 4, size: 2.2}};
-// dataCollection2.yayNewPal(myHonda)
+// dataManager.yayNewPal(myHonda)
 
 
 

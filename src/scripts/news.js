@@ -1,6 +1,6 @@
 // author : Grady R. and lots of credit due to Jisie David/fridgify app
 //Given a single food object, this component builds out the HTML and returns it
-import dataCollection2 from "./dataCollection2"
+import dataManager from "./dataManager"
 import newsList from "./newsList";
 
 const news = {
@@ -44,7 +44,7 @@ const news = {
       deleteNewsButton.addEventListener("click", () => {
         //   console.log("delete button clicked")
           let newsId = event.target.id.split("--")[1]
-          dataCollection2.deleteNewsItem(newsId)
+          dataManager.deleteNewsItem(newsId)
           .then(response => {
                 newsList.newsify()
               })

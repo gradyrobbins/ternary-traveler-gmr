@@ -1,4 +1,4 @@
-import dataCollection2 from "./dataCollection2";
+import dataManager from "./dataManager";
 import eventListeners2 from "./eventListeners2";
 
 //author: Grady R.
@@ -20,7 +20,7 @@ import eventListeners2 from "./eventListeners2";
     // 3. Call the method(postNewFood) with the fetch request to POST to the API and pass it the object we created in the previous step
 
 
-// import dataCollection2 from "./dataCollection2";
+// import dataManager from "./dataManager";
 // import newsList from "./newsList"
 
 const form = {
@@ -88,7 +88,7 @@ handleAddNewInterest (event) {
       }
     //   console.log("newInterest as object " , newInterest)
     // 3. Call the method(postnewNews) with the fetch request to POST to the API and pass it the object we created in the previous step
-      dataCollection2.postNewInterest(newInterest)
+      dataManager.postNewInterest(newInterest)
       eventListeners2.clearForm();
     // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
 }
