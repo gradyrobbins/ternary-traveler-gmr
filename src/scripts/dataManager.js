@@ -61,7 +61,8 @@ const dataManager = {
       // },
 
 
-
+//       Make a request to the following URL: http://localhost:3000/products/1?_expand=productType
+// Notice how we are getting all data about the product with id 1 but instead of the productTypeId, we get the data for the associated product type.
 
 
 
