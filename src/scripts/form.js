@@ -179,9 +179,9 @@ handleAddNewInterest (event) {
     let newInterest = {
         name: interestName,
         description: interestDescription,
-          cost: interestCost,
-          place: whichPlace.name,
-          review: interestReview
+        cost: interestCost,
+        placeId: whichPlace,
+        review: interestReview
       }
       console.log("newInterest as object " , newInterest)
 
