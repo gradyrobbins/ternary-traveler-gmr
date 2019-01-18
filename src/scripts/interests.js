@@ -1,7 +1,7 @@
 // author : Grady R. and lots of credit due to Jisie David/fridgify app
 //Given a single  object, this component builds out the HTML and returns it
 import dataManager from "./dataManager"
-import newsList from "./newsList";
+// import newsList from "./newsList";
 
 const interests = {
 

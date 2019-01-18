@@ -13,16 +13,13 @@ const interestsList = {
     dataManager.getAllInterests()
     .then(allInterests => {
 
-      // An empty document fragment
-      // let newsDocFragment = document.createDocumentFragment()
+      // Begin building An empty document fragment
       let interestsDocFragment = document.createDocumentFragment()
 
       // 2. Iterate over data and build HTML for each item
       // We loop over the array of objects returned from our API and for each obect, we make a call to the newsBuider method in the news module. This method takes a news object as an argument and returns an HTML component. Once we have that HTML, we append it to our document fragment so that it is slowly built up. By the end of the forEach loop, our document fragment contains all the HTML for all our data.
       allInterests.forEach(newsObject => {
           console.log("forEach interestsObject: ", newsObject)
-        // let newsHTML = news.newsBuilder(newsObject)
-        // newsDocFragment.appendChild(newsHTML)
         let interestsHTML = interests.interestsBuilder(newsObject)
         interestsDocFragment.appendChild(interestsHTML)
       })

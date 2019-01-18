@@ -22,8 +22,8 @@ const eventListeners2 = {
     },
 
     // deleteNewsButton() {
-        //     let deleteNewsButton = document.getElementById()
-        // }
+    //         let deleteNewsButton = document.getElementById()
+    //     }
 
 
         clearForm() {
