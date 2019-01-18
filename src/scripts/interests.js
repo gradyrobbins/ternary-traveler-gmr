@@ -40,6 +40,13 @@ const interests = {
       let interestsReview = document.createElement("p")
       interestsReview.textContent = interestsObject.review
 
+
+        let editButton = document.createElement("button")
+        editButton.setAttribute("id", `editInterestsButtonid#--${interestsObject.id}`)
+        editButton.textContent = "Edit This Entry"
+
+        editButton.addEventListener("click", console.log("edit button clicked"))
+
       let deleteinterestsButton = document.createElement("button")
       deleteinterestsButton.setAttribute("id", `deleteinterestsid#--${interestsObject.id}`)
       deleteinterestsButton.textContent = "Delete this interests article"
@@ -60,6 +67,7 @@ const interests = {
     interestsArticle.appendChild(interestsDescription)
     interestsArticle.appendChild(interestsCost)
     interestsArticle.appendChild(interestsReview)
+    interestsArticle.appendChild(editButton)
     interestsArticle.appendChild(deleteinterestsButton)
 
 

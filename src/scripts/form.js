@@ -107,12 +107,13 @@ formHeader.textContent = "Add a new interest"
     ReviewField.appendChild(ReviewInput)
 
 
+
     let submitButton = document.createElement("button")
     submitButton.setAttribute("id", "saveInterestsButton")
     submitButton.textContent = "Add New Interest"
-
     // 2. Attach event listener to button in form
     submitButton.addEventListener("click", this.handleAddNewInterest)
+   
 
     // 3. Append the HTML form to the DOM
     //Notice that I have added an article element to my index.html with the class "form".
@@ -125,6 +126,7 @@ formHeader.textContent = "Add a new interest"
         FormFragment.appendChild(placeTypeSelect)
         FormFragment.appendChild(ReviewField)
 
+            // FormFragment.appendChild(editButton)
             FormFragment.appendChild(submitButton)
 
     let formArticle = document.querySelector("#forms")
