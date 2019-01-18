@@ -15,8 +15,8 @@ domBuilder.appendPlaces();
 
 dataManager.getAllPlaces()
 .then(response =>
-    console.log("getAllPlaces" , response)
-    
+    // console.log("getAllPlaces" , response)
+
     )
 
 

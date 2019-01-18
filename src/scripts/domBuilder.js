@@ -18,7 +18,7 @@ const domBuilder = {
             allPlaces.forEach(place => {
                 // console.log("forEach places: ", place)
                 let placesDiv = document.getElementById("places");
-                placesDiv.innerHTML += `${place.name} <br/>`
+                placesDiv.innerHTML += `<a href="${place.name}" id="${place.id}">${place.name} <br/>`
             })
         })
     },
