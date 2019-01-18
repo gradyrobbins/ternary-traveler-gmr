@@ -3,6 +3,7 @@
     border: 1px solid black;
     padding: 20px;
     margin: 20px;
+    border-radius: 25px;
 }
 
 #output-container {
@@ -10,18 +11,27 @@
     border: 1px solid black;
     padding: 20px;
     margin: 20px;
+    border-radius: 25px;
 }
 #forms {
     background-color: burlywood;
     border: 1px solid black;
     padding: 20px;
     margin: 20px;
+    border-radius: 25px;
+}
+#places {
+    background-color: burlywood;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 25px;
 }
 #formsPlaceholder {
     background-color: burlywood;
     border: 1px solid black;
     padding: 20px;
-    margin: 20px;
+    margin: 20px;border-radius: 25px;
 };
 
 

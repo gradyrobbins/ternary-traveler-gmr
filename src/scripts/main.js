@@ -1,21 +1,27 @@
 console.log("Hello main.js")
 
 
-import dataCollection2 from "./dataCollection2";
+import dataManager from "./dataManager";
 import eventListeners2 from "./eventListeners2"
 // import form from "./form"
-// import newsList from "./newsList"
+// import interestsList from "./interestsList"
+import domBuilder from "./domBuilder"
 
 
 eventListeners2.renderForm();
-// newsList.newsify()
+// interestsList.newsify()
+domBuilder.appendInterests();
+domBuilder.appendPlaces();
 
-dataCollection2.getAllPlaces();
-dataCollection2.getAllInterests();
+dataManager.getAllPlaces()
+.then(response =>
+    console.log("getAllPlaces" , response)
+    
+    )
 
 
-// var myHonda = {color: "red", wheels: 4, engine: {cylinders: 4, size: 2.2}};
-// dataCollection2.yayNewPal(myHonda)
+dataManager.getAllInterests();
+
 
 
 
