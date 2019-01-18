@@ -14,10 +14,11 @@ const domBuilder = {
         dataManager.getAllPlaces()
         // 2. Iterate over data and build HTML for each item
         .then(allPlaces => {
-            
+
             allPlaces.forEach(place => {
                 // console.log("forEach places: ", place)
-
+                let placesDiv = document.getElementById("places");
+                placesDiv.innerHTML += `${place.name} <br/>`
             })
         })
     },
