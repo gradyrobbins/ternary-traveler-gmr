@@ -28,7 +28,7 @@ const eventListeners2 = {
 
         clearForm() {
 
-               return document.getElementById("interest__name__input").value = "";
+               return document.querySelectorAll("input").value = "";
             }
 
     }

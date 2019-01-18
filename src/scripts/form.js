@@ -37,6 +37,7 @@ formHeader.textContent = "Add a new interest"
         let NameInput = document.createElement("input")
             NameInput.setAttribute("id", "interest__name__input")
             NameInput.setAttribute("name", "interest__name__input")
+            NameInput.setAttribute("other", "inputField")
 
     NameField.appendChild(NameLabel)
     NameField.appendChild(NameInput)
@@ -49,6 +50,7 @@ formHeader.textContent = "Add a new interest"
         let DescriptionInput = document.createElement("input")
             DescriptionInput.setAttribute("id", "interest__description__input")
             DescriptionInput.setAttribute("name", "interest__description__input")
+            DescriptionInput.setAttribute("other", "inputField")
 
     DescriptionField.appendChild(DescriptionLabel)
     DescriptionField.appendChild(DescriptionInput)
@@ -61,6 +63,7 @@ formHeader.textContent = "Add a new interest"
         let CostInput = document.createElement("input")
             CostInput.setAttribute("id", "interest__cost__input")
             CostInput.setAttribute("name", "interest__cost__input")
+            CostInput.setAttribute("other", "inputField")
 
     CostField.appendChild(CostLabel)
     CostField.appendChild(CostInput)
@@ -98,6 +101,7 @@ formHeader.textContent = "Add a new interest"
         let ReviewInput = document.createElement("input")
             ReviewInput.setAttribute("id", "interest__review__input")
             ReviewInput.setAttribute("name", "interest__review__input")
+            ReviewInput.setAttribute("other", "inputField")
 
     ReviewField.appendChild(ReviewLabel)
     ReviewField.appendChild(ReviewInput)
