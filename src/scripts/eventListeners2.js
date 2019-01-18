@@ -28,7 +28,7 @@ const eventListeners2 = {
 
         clearForm() {
 
-               return document.querySelectorAll("input").value = "";
+                document.querySelectorAll("inputField").value = "";
             }
 
     }

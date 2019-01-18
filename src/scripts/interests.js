@@ -48,13 +48,11 @@ const interests = {
         editButton.addEventListener("click", () => {
             console.log("edit button clicked")
             let editinterestsId = event.target.id.split("--")[1]
-            dataManager.seeksUserId(editinterestsId)
+            dataManager.seeksInterestsId(editinterestsId)
             // .then(response => {
-            //       console.log(response)
+            //       console.log("response" , response)
             //     // interestsList.newsify()
-            //     })
-
-
+                // })
               })
 
       let deleteinterestsButton = document.createElement("button")
@@ -68,8 +66,6 @@ const interests = {
         //   .then(response => {
         //         interestsList.newsify()
         //       })
-
-
             })
 
     interestsArticle.appendChild(interestsName);

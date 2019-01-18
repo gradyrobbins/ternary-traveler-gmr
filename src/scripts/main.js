@@ -12,7 +12,7 @@ eventListeners2.renderForm();
 domBuilder.appendInterests();
 domBuilder.appendPlaces();
 
-dataManager.getAllPlaces()
+// dataManager.getAllPlaces()
 // .then(response =>
 // console.log("getAllPlaces" , response)
 // )

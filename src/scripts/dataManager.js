@@ -45,21 +45,21 @@ const dataManager = {
       // EDIT USER - 2 STAGES
 
       //STAGE 1 - Get the id of the item.
-      seeksUserId(id) {
+      seeksInterestsId(id) {
         return fetch(`http://localhost:8088/interests/${id}`)
         .then(response => response.json())
         .then(response => console.log(response))
       },
       // //STAGE 2 - Do some stuff to the item.
-      // thingsChange() {
-      //   return fetch(`http://localhost:8088/users/${id}`, {
-      //     method: "PUT",
-      //     headers: {
-      //       "Content-Type": "application/json"
-      //     },
-      //     body: JSON.stringify(newUser)
-      //   })
-      // },
+      thingsChange(interestObjToEdit, editedObject) {
+        return fetch(`http://localhost:8088/interests/${id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(newUser)
+        })
+      },
 
 
 //       Make a request to the following URL: http://localhost:3000/products/1?_expand=productType

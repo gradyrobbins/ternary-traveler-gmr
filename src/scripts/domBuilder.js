@@ -44,9 +44,9 @@ const domBuilder = {
       let outputArticle = document.querySelector("#output-container")
 
       outputArticle.appendChild(interestsDocFragment)
-
     })
   }
+  // location.reload(true)
 }
 
 export default domBuilder
