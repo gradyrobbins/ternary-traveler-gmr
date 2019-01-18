@@ -47,8 +47,8 @@ const interests = {
 
       deleteinterestsButton.addEventListener("click", () => {
           console.log("delete button clicked")
-        //   let interestsId = event.target.id.split("--")[1]
-        //   dataManager.deleteInterestItem(interestsId)
+          let interestsId = event.target.id.split("--")[1]
+          dataManager.deleteInterestItem(interestsId)
         //   .then(response => {
         //         interestsList.newsify()
         //       })

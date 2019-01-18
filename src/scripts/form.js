@@ -159,6 +159,10 @@ formHeader.textContent = "Add a new interest"
 handleAddNewInterest (event) {
     // 1. Get user input that user entered
     let interestName = document.querySelector("#interest__name__input").value
+    let interestDescription = document.querySelector("#interest__description__input").value
+    // let interestName = document.querySelector("#interest__name__input").value
+    // let interestName = document.querySelector("#interest__name__input").value
+    // let interestName = document.querySelector("#interest__name__input").value
     // console.log("interestName")
     // console.log(interestName)
     // 2. Create a new object with the same structure we have been using throughout the application to represent a news item:
@@ -172,11 +176,12 @@ handleAddNewInterest (event) {
 
     let newInterest = {
         name: interestName,
-        // description: "user input description",
-        //   cost: "user input cost",
-        //   place: "user select  place from dropdown",
+        description: interestDescription,
+          cost: "placeholder text cost",
+          place: "placeholder text/place from dropdown",
+          review: "Placeholder review"
       }
-    //   console.log("newInterest as object " , newInterest)
+      console.log("newInterest as object " , newInterest)
     // 3. Call the method(postnewNews) with the fetch request to POST to the API and pass it the object we created in the previous step
       dataManager.postNewInterest(newInterest)
       eventListeners2.clearForm();
