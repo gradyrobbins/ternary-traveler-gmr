@@ -14,10 +14,9 @@ domBuilder.appendInterests();
 domBuilder.appendPlaces();
 
 dataManager.getAllPlaces()
-.then(response =>
+// .then(response =>
     // console.log("getAllPlaces" , response)
-
-    )
+    // )
 
 
 dataManager.getAllInterests();
