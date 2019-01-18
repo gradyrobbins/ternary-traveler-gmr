@@ -45,12 +45,21 @@ const interests = {
         editButton.setAttribute("id", `editInterestsButtonid#--${interestsObject.id}`)
         editButton.textContent = "Edit This Entry"
 
-        editButton.addEventListener("click", console.log("edit button clicked"))
+        editButton.addEventListener("click", () => {
+            console.log("edit button clicked")
+            let editinterestsId = event.target.id.split("--")[1]
+            dataManager.seeksUserId(editinterestsId)
+            .then(response => {
+                  console.log(response)
+                // interestsList.newsify()
+                })
+
+
+              })
 
       let deleteinterestsButton = document.createElement("button")
       deleteinterestsButton.setAttribute("id", `deleteinterestsid#--${interestsObject.id}`)
       deleteinterestsButton.textContent = "Delete this interests article"
-
 
       deleteinterestsButton.addEventListener("click", () => {
           console.log("delete button clicked")

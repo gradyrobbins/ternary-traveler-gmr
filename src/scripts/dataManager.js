@@ -45,10 +45,11 @@ const dataManager = {
       // EDIT USER - 2 STAGES
 
       //STAGE 1 - Get the id of the item.
-      // seeksUserId(id) {
-      //   return fetch(`http://localhost:8088/users/${id}`)
-      //   .then(response => response.json())
-      // },
+      seeksUserId(id) {
+        return fetch(`http://localhost:8088/interests/${id}`)
+        .then(response => response.json())
+        .then(response => console.log(response))
+      },
       // //STAGE 2 - Do some stuff to the item.
       // thingsChange() {
       //   return fetch(`http://localhost:8088/users/${id}`, {

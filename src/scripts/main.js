@@ -4,7 +4,7 @@ console.log("Hello main.js")
 import dataManager from "./dataManager";
 import eventListeners2 from "./eventListeners2"
 // import form from "./form"
-import interestsList from "./interestsList"
+// import interestsList from "./interestsList"
 import domBuilder from "./domBuilder"
 
 
@@ -19,7 +19,7 @@ dataManager.getAllPlaces()
 
 
 dataManager.getAllInterests();
-interestsList.newsify()
+// interestsList.newsify()
 
 
 

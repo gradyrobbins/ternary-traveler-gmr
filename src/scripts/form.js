@@ -113,7 +113,7 @@ formHeader.textContent = "Add a new interest"
     submitButton.textContent = "Add New Interest"
     // 2. Attach event listener to button in form
     submitButton.addEventListener("click", this.handleAddNewInterest)
-   
+
 
     // 3. Append the HTML form to the DOM
     //Notice that I have added an article element to my index.html with the class "form".
@@ -186,12 +186,11 @@ handleAddNewInterest (event) {
       console.log("newInterest as object " , newInterest)
     // 3. Call the method(postnewInterest) with the fetch request to POST to the API and pass it the object we created in the previous step
       dataManager.postNewInterest(newInterest)
+      // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
       eventListeners2.clearForm();
-    // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
 
 
 
-    // eventListeners2.clearForm()
     // newsList.newsify()
 
 }
