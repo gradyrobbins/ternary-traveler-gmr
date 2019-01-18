@@ -49,10 +49,10 @@ const interests = {
             console.log("edit button clicked")
             let editinterestsId = event.target.id.split("--")[1]
             dataManager.seeksUserId(editinterestsId)
-            .then(response => {
-                  console.log(response)
-                // interestsList.newsify()
-                })
+            // .then(response => {
+            //       console.log(response)
+            //     // interestsList.newsify()
+            //     })
 
 
               })
