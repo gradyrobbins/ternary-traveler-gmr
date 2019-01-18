@@ -1,4 +1,4 @@
-//author: Grady R.
+// author: Grady R.
 // purpose: Forms module, object with methods to retrieve misc forms.
 
 import dataManager from "./dataManager";
@@ -18,15 +18,16 @@ import eventListeners2 from "./eventListeners2";
 //   description: "user input description",
 //   cost: "user input cost",
 //   place: "user select  place from dropdown",
+//   review: "it was wonderful"
 // }
 // 3. Call the method(postNewInterest) with the fetch request to POST to the API and pass it the object we created in the previous step
 
 const form = {
     renderForm() {
 
-    // 1. Build HTML form see fridgify:// createAndAppendForm () {
-    let formHeader = document.createElement("h3")
-    formHeader.textContent = "Add a new interest"
+// 1. Build HTML form see fridgify:// createAndAppendForm () {
+let formHeader = document.createElement("h3")
+formHeader.textContent = "Add a new interest"
 
     let NameField = document.createElement("fieldset")
         let NameLabel = document.createElement("label")
@@ -40,22 +41,71 @@ const form = {
     NameField.appendChild(NameLabel)
     NameField.appendChild(NameInput)
 
-    let placeTypeSelect = document.createElement("select")
-    placeTypeSelect.setAttribute("id", "place__type__select")
+    let DescriptionField = document.createElement("fieldset")
+        let DescriptionLabel = document.createElement("label")
+            DescriptionLabel.textContent = "Description"
+            DescriptionLabel.setAttribute("for", "interest__description__label")
 
-    //     <select>
-//   <option value="volvo">Volvo</option>
-//   <option value="saab">Saab</option>
-//   <option value="mercedes">Mercedes</option>
-//   <option value="audi">Audi</option>
-// </select>
+        let DescriptionInput = document.createElement("input")
+            DescriptionInput.setAttribute("id", "interest__description__input")
+            DescriptionInput.setAttribute("name", "interest__description__input")
 
+    DescriptionField.appendChild(DescriptionLabel)
+    DescriptionField.appendChild(DescriptionInput)
 
+    let CostField = document.createElement("fieldset")
+        let CostLabel = document.createElement("label")
+            CostLabel.textContent = "Cost"
+            CostLabel.setAttribute("for", "interest__cost__label")
+
+        let CostInput = document.createElement("input")
+            CostInput.setAttribute("id", "interest__cost__input")
+            CostInput.setAttribute("name", "interest__cost__input")
+
+    CostField.appendChild(CostLabel)
+    CostField.appendChild(CostInput)
+
+    let placeTypeSelect = document.createElement("select");
+    placeTypeSelect.setAttribute("id", "mySelect");
+
+    let kathmanduOption = document.createElement("option");
+    // kathmanduOption.setAttribute("value", `${places[0].id}`)
+    // kathmanduOption.textContent = `${places[0].name}`
+    kathmanduOption.setAttribute("value", "1")
+    kathmanduOption.textContent = "Kathmandu"
+
+    let dhakaOption = document.createElement("option");
+    // dhakaOption.setAttribute("value", `${places[1].id}`)
+    // dhakaOption.textContent = `${places[1].name}`
+    dhakaOption.setAttribute("value", "2")
+    dhakaOption.textContent = "Dhaka"
+
+    let mumbaiOption = document.createElement("option");
+    // mumbaiOption.setAttribute("value", `${places[2].id}`)
+    // mumbaiOption.textContent = `${places[2].name}`
+    mumbaiOption.setAttribute("value", "3")
+    mumbaiOption.textContent = "Mumbai"
+
+    placeTypeSelect.appendChild(mumbaiOption)
+    placeTypeSelect.appendChild(dhakaOption)
+    placeTypeSelect.appendChild(kathmanduOption)
+
+    let ReviewField = document.createElement("fieldset")
+        let ReviewLabel = document.createElement("label")
+            ReviewLabel.textContent = "Review"
+            ReviewLabel.setAttribute("for", "interest__review__label")
+
+        let ReviewInput = document.createElement("input")
+            ReviewInput.setAttribute("id", "interest__review__input")
+            ReviewInput.setAttribute("name", "interest__review__input")
+
+    ReviewField.appendChild(ReviewLabel)
+    ReviewField.appendChild(ReviewInput)
 
 
     let submitButton = document.createElement("button")
-        submitButton.setAttribute("id", "saveInterestsButton")
-        submitButton.textContent = "Add New Interest"
+    submitButton.setAttribute("id", "saveInterestsButton")
+    submitButton.textContent = "Add New Interest"
 
     // 2. Attach event listener to button in form
     submitButton.addEventListener("click", this.handleAddNewInterest)
@@ -65,9 +115,13 @@ const form = {
 
     let FormFragment = document.createDocumentFragment()
     FormFragment.appendChild(formHeader)
-    FormFragment.appendChild(NameField)
-    FormFragment.appendChild(placeTypeSelect)
-    FormFragment.appendChild(submitButton)
+        FormFragment.appendChild(NameField)
+        FormFragment.appendChild(DescriptionField)
+        FormFragment.appendChild(CostField)
+        FormFragment.appendChild(placeTypeSelect)
+        FormFragment.appendChild(ReviewField)
+
+            FormFragment.appendChild(submitButton)
 
     let formArticle = document.querySelector("#forms")
     formArticle.appendChild(FormFragment)

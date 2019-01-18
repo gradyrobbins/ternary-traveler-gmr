@@ -29,13 +29,7 @@ const news = {
       let newsTitle = document.createElement("h3")
       newsTitle.textContent = newsObject.name
 
-    //   let newsSynopsis = document.createElement("p")
-    //   newsSynopsis.textContent = newsObject.synopsis
-
-      // let newsURL = document.createElement("p")
-      // newsURL.textContent = newsObject.url
-
-
+    
       // let deleteNewsButton = document.createElement("button")
       // deleteNewsButton.setAttribute("id", `deleteNewsid#--${newsObject.id}`)
       // deleteNewsButton.textContent = "Delete this News article"
