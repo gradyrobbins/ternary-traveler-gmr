@@ -160,9 +160,9 @@ handleAddNewInterest (event) {
     // 1. Get user input that user entered
     let interestName = document.querySelector("#interest__name__input").value
     let interestDescription = document.querySelector("#interest__description__input").value
+    let interestCost = document.querySelector("#interest__cost__input").value
     // let interestName = document.querySelector("#interest__name__input").value
-    // let interestName = document.querySelector("#interest__name__input").value
-    // let interestName = document.querySelector("#interest__name__input").value
+    let interestReview = document.querySelector("#interest__review__input").value
     // console.log("interestName")
     // console.log(interestName)
     // 2. Create a new object with the same structure we have been using throughout the application to represent a news item:
@@ -177,12 +177,12 @@ handleAddNewInterest (event) {
     let newInterest = {
         name: interestName,
         description: interestDescription,
-          cost: "placeholder text cost",
+          cost: interestCost,
           place: "placeholder text/place from dropdown",
-          review: "Placeholder review"
+          review: interestReview
       }
       console.log("newInterest as object " , newInterest)
-    // 3. Call the method(postnewNews) with the fetch request to POST to the API and pass it the object we created in the previous step
+    // 3. Call the method(postnewInterest) with the fetch request to POST to the API and pass it the object we created in the previous step
       dataManager.postNewInterest(newInterest)
       eventListeners2.clearForm();
     // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
