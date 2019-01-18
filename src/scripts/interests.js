@@ -45,16 +45,16 @@ const interests = {
       deleteinterestsButton.textContent = "Delete this interests article"
 
 
-      // deleteinterestsButton.addEventListener("click", () => {
-      //   //   console.log("delete button clicked")
-      //     let interestsId = event.target.id.split("--")[1]
-      //     dataManager.deleteinterestsItem(interestsId)
-      //     .then(response => {
-      //           interestsList.interestsify()
-      //         })
+      deleteinterestsButton.addEventListener("click", () => {
+          console.log("delete button clicked")
+        //   let interestsId = event.target.id.split("--")[1]
+        //   dataManager.deleteInterestItem(interestsId)
+        //   .then(response => {
+        //         interestsList.newsify()
+        //       })
 
 
-      //       })
+            })
 
     interestsArticle.appendChild(interestsName);
     interestsArticle.appendChild(interestsDescription)

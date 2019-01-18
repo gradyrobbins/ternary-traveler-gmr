@@ -27,10 +27,8 @@ const interestsList = {
       // 3. Append the HTML to the DOM
       // We get a reference to a HTML element with the class "output" and append our document fragment to that element. Because the HTML element with class "output" is already on the DOM, the HTML in the document fragment is appended to the DOM.
       let outputArticle = document.querySelector("#output-container")
-    //   let newsContainerDiv = document.querySelector("#newsContainer")
 
       outputArticle.appendChild(interestsDocFragment)
-    //   newsContainerDiv.appendChild(newsDocFragment)
 
     })
   }
