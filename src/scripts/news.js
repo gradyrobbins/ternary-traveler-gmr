@@ -1,5 +1,5 @@
 // author : Grady R. and lots of credit due to Jisie David/fridgify app
-//Given a single food object, this component builds out the HTML and returns it
+//Given a single  object, this component builds out the HTML and returns it
 import dataManager from "./dataManager"
 import newsList from "./newsList";
 
@@ -29,7 +29,7 @@ const news = {
       let newsTitle = document.createElement("h3")
       newsTitle.textContent = newsObject.name
 
-    
+
       // let deleteNewsButton = document.createElement("button")
       // deleteNewsButton.setAttribute("id", `deleteNewsid#--${newsObject.id}`)
       // deleteNewsButton.textContent = "Delete this News article"

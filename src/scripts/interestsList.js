@@ -4,10 +4,9 @@
 // To get the data, we will use the dataManager component.
 import dataManager from "./dataManager"
 // To build the HTML for each object in the array of places(which is what the data coming from the API becomes once we parse it), we will use the food component.
-import news from "./news"
 import interests from "./interests"
 
-const newsList = {
+const interestsList = {
   newsify(){
     // 1. Get data
     // The getAllInterests method will do a fetch and return a promise. This call will return the data from the API in the response.
@@ -33,11 +32,11 @@ const newsList = {
       let outputArticle = document.querySelector("#output-container")
     //   let newsContainerDiv = document.querySelector("#newsContainer")
 
-      outputArticle.appendChild(newsDocFragment)
+      outputArticle.appendChild(interestsDocFragment)
     //   newsContainerDiv.appendChild(newsDocFragment)
 
     })
   }
 }
 
-export default newsList
+export default interestsList

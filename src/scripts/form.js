@@ -184,7 +184,7 @@ handleAddNewInterest (event) {
 
 
 
-    eventListeners2.clearForm()
+    // eventListeners2.clearForm()
     // newsList.newsify()
 
 }
