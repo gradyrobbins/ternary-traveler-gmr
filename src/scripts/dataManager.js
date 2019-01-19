@@ -56,7 +56,7 @@ const dataManager = {
       // //STAGE 2 - Do some stuff to the item.
       thingsChange(id, editedObject) {
         return fetch(`http://localhost:8088/interests/${id}`, {
-          method: "PUT",
+          method: "PATCH",
           headers: {
             "Content-Type": "application/json"
           },
