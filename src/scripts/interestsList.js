@@ -26,7 +26,7 @@ const interestsList = {
 
       // 3. Append the HTML to the DOM
       // We get a reference to a HTML element with the class "output" and append our document fragment to that element. Because the HTML element with class "output" is already on the DOM, the HTML in the document fragment is appended to the DOM.
-      let outputArticle = document.querySelector("#output-container")
+      let outputArticle = document.querySelector(".output-container")
 
 
       //This while loop essentially removes all child nodes of an element until the element has no child nodes left. It is equivalent to the following:

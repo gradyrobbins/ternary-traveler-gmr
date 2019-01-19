@@ -6,13 +6,15 @@
     border-radius: 25px;
 }
 
-#output-container {
+/* .output-container {
+    display: flex;
     background-color: burlywood;
     border: 1px solid black;
     padding: 20px;
     margin: 20px;
-    border-radius: 25px;
-}
+     border-radius: 25px;
+} */
+
 #forms {
     background-color: burlywood;
     border: 1px solid black;
@@ -34,4 +36,11 @@
     margin: 20px;border-radius: 25px;
 };
 
+/* specificity is problem here; i want to apply style to all cards, but class selectors > id selectors */
+.interestsCard {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 25px;
 
+}

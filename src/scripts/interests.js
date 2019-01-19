@@ -27,9 +27,13 @@ const interests = {
     interestsBuilder(interestsObject) {
 
       let interestsArticle = document.createElement("article")
+      interestsArticle.setAttribute("class", "interestsCard")
 
       let interestsName = document.createElement("h3")
       interestsName.textContent = `${interestsObject.name}`
+
+      let interestsPlace = document.createElement("h5")
+      interestsPlace.textContent = `Place (id# only): ${interestsObject.placeId}`
 
       let interestsDescription = document.createElement("p")
       interestsDescription.textContent = `Description: ${interestsObject.description}`
@@ -69,11 +73,12 @@ const interests = {
             })
 
     interestsArticle.appendChild(interestsName);
+    interestsArticle.appendChild(interestsPlace);
     interestsArticle.appendChild(interestsDescription)
     interestsArticle.appendChild(interestsCost)
     interestsArticle.appendChild(interestsReview)
-    interestsArticle.appendChild(editButton)
-    interestsArticle.appendChild(deleteinterestsButton)
+      interestsArticle.appendChild(editButton)
+      interestsArticle.appendChild(deleteinterestsButton)
 
 
     return interestsArticle
