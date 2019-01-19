@@ -29,21 +29,21 @@ const interests = {
       let interestsArticle = document.createElement("article")
 
       let interestsName = document.createElement("h3")
-      interestsName.textContent = interestsObject.name
+      interestsName.textContent = `${interestsObject.name}`
 
       let interestsDescription = document.createElement("p")
-      interestsDescription.textContent = interestsObject.description
+      interestsDescription.textContent = `Description: ${interestsObject.description}`
 
       let interestsCost = document.createElement("p")
-      interestsCost.textContent = interestsObject.cost
+      interestsCost.textContent = `Cost: ${interestsObject.cost}`
 
       let interestsReview = document.createElement("p")
-      interestsReview.textContent = interestsObject.review
+      interestsReview.textContent = `Review: ${interestsObject.review}`
 
 
         let editButton = document.createElement("button")
         editButton.setAttribute("id", `editInterestsButtonid#--${interestsObject.id}`)
-        editButton.textContent = "Edit This Entry"
+        editButton.textContent = "Edit "
 
         editButton.addEventListener("click", () => {
             console.log("edit button clicked")
@@ -57,7 +57,7 @@ const interests = {
 
       let deleteinterestsButton = document.createElement("button")
       deleteinterestsButton.setAttribute("id", `deleteinterestsid#--${interestsObject.id}`)
-      deleteinterestsButton.textContent = "Delete this interests article"
+      deleteinterestsButton.textContent = "Delete "
 
       deleteinterestsButton.addEventListener("click", () => {
           console.log("delete button clicked")
