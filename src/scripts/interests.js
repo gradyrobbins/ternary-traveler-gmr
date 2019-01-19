@@ -2,6 +2,7 @@
 //Given a single  object, this component builds out the HTML and returns it
 import dataManager from "./dataManager"
 // import newsList from "./newsList";
+import form from "./form"
 
 const interests = {
 
@@ -51,12 +52,8 @@ const interests = {
 
         editButton.addEventListener("click", () => {
             console.log("edit button clicked")
-            let editinterestsId = event.target.id.split("--")[1]
-            dataManager.seeksInterestsId(editinterestsId)
-            // .then(response => {
-            //       console.log("response" , response)
-            //     // interestsList.newsify()
-                // })
+            form.renderEditForm()
+            
               })
 
       let deleteinterestsButton = document.createElement("button")
@@ -64,7 +61,7 @@ const interests = {
       deleteinterestsButton.textContent = "Delete "
 
       deleteinterestsButton.addEventListener("click", () => {
-          console.log("delete button clicked")
+          alert("delete button clicked, are you sure you want to delete this entry?")
           let interestsId = event.target.id.split("--")[1]
           dataManager.deleteInterestItem(interestsId)
         //   .then(response => {

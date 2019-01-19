@@ -48,7 +48,7 @@ const dataManager = {
       seeksInterestsId(id) {
         return fetch(`http://localhost:8088/interests/${id}`)
         .then(response => response.json())
-        // .then(response => console.log(response))
+        .then(response => console.log(response))
       },
       // //STAGE 2 - Do some stuff to the item.
       thingsChange(interestObjToEdit, editedObject) {
