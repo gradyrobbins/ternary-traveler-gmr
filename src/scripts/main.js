@@ -9,18 +9,17 @@ import domBuilder from "./domBuilder"
 
 
 eventListeners2.renderForm();
-// interestsList.newsify()
 domBuilder.appendInterests();
 domBuilder.appendPlaces();
 
-dataManager.getAllPlaces()
-.then(response =>
-    console.log("getAllPlaces" , response)
-    
-    )
+// dataManager.getAllPlaces()
+// .then(response =>
+// console.log("getAllPlaces" , response)
+// )
 
 
 dataManager.getAllInterests();
+// interestsList.newsify()
 
 
 
