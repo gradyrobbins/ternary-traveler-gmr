@@ -1,6 +1,6 @@
 // Grady
 // Grab some data
-import form from "./form"
+// import form from "./form"
 
 
 const dataManager = {
@@ -60,7 +60,7 @@ const dataManager = {
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(newUser)
+          body: JSON.stringify(newObject)
         })
       },
 

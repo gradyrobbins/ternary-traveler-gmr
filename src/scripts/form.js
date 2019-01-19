@@ -3,6 +3,7 @@
 
 import dataManager from "./dataManager";
 import eventListeners2 from "./eventListeners2";
+import interestsEditForm from "./interestsEditForm"
 
 
 // This module will build a form and append it to the DOM. The form will contain input fields for a user to add a new interest to their places-list and a button with an event listener that will listen for the click
@@ -159,13 +160,16 @@ formHeader.textContent = "Add a new interest"
 
 // user would like to be able to edit the point of interest by adjusting the cost and adding a review.
 renderEditForm (obj) {
-
-    console.log("render Edit form using: ")
+    console.log("renderEditForm() was fired from form.js ")
+    console.log("object id: ", obj.id)
+    console.log("object : ")
     console.log(obj)
+    // let editFormDiv = document.getElementById("editForm")
+    // editFormDiv.innerHTML = ""
 
-    // let editFormDiv = document.getElementById("editForm");
-    // editFormDiv.innerHTML = `bloop : string interpolation using obj keys`
-
+    let arg1 = obj.id;
+    let arg2 = obj;
+    interestsEditForm.createAndAppendEditForm(arg1, arg2);
 
 
 

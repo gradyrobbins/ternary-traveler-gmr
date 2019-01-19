@@ -56,7 +56,7 @@ const interests = {
           // let foodId = interestId.split("--")[1]
           dataManager.seeksInterestsId(interestId)
           .then(response => {
-            console.log(response)
+            form.renderEditForm(response)
             // foodEditForm.createAndAppendForm(articleId, response)
           })
         })
