@@ -54,13 +54,13 @@ const dataManager = {
         // .then(response => form.renderEditForm(response))
       },
       // //STAGE 2 - Do some stuff to the item.
-      thingsChange(interestObjToEdit, editedObject) {
+      thingsChange(id, editedObject) {
         return fetch(`http://localhost:8088/interests/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(newObject)
+          body: JSON.stringify(editedObject)
         })
       },
 

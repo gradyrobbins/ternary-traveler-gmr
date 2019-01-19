@@ -5,8 +5,8 @@ const interestEditForm = {
   // This module will build an edit form and append it to the DOM. The form will contain input fields with existing values from the API and an Update button. The user can edit the values in the input fields. An event listener on the Update button will handle taking the new values entered by the user and calling the API to update the data.
   createAndAppendEditForm (arg1, arg2) {
 
-    // Building the edit form with fields for the name, expiration and type of the food item. Each of the input fields contains the existing values from the database.
-    let interestCostField = document.createElement("p")
+    // Building the edit form with fields for the cost and review of the interest object. Each of the input fields contains the existing values from the database.
+    let interestCostField = document.createElement("h4")
 
     let interestCostLabel = document.createElement("label")
     interestCostLabel.textContent = "Cost"
@@ -15,6 +15,17 @@ const interestEditForm = {
 
     interestCostField.appendChild(interestCostLabel)
     interestCostField.appendChild(interestCostInput)
+
+    let interestReviewField = document.createElement("h4")
+
+    let interestReviewLabel = document.createElement("label")
+    interestReviewLabel.textContent = "Review"
+    let interestReviewInput = document.createElement("input")
+    interestReviewInput.value = arg2.review
+
+    interestReviewField.appendChild(interestReviewLabel)
+    interestReviewField.appendChild(interestReviewInput)
+
 
 
 
@@ -25,7 +36,7 @@ const interestEditForm = {
     updateButton.addEventListener("click", () => {
         let editedInterest = {
           cost: interestCostInput.value,
-          // review: foodNameInput.value,
+          review: interestReviewInput.value,
 
         }
 
@@ -44,8 +55,7 @@ const interestEditForm = {
       }
 
       foodItemArticle.appendChild(interestCostField)
-      // foodItemArticle.appendChild(foodExpirationField)
-      // foodItemArticle.appendChild(foodTypeField)
+      foodItemArticle.appendChild(interestReviewField)
       foodItemArticle.appendChild(updateButton)
     }
   }
