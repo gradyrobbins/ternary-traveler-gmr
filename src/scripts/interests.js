@@ -45,16 +45,26 @@ const interests = {
       let interestsReview = document.createElement("p")
       interestsReview.textContent = `Review: ${interestsObject.review}`
 
-
-        let editButton = document.createElement("button")
-        editButton.setAttribute("id", `editInterestsButtonid#--${interestsObject.id}`)
-        editButton.textContent = "Edit "
-
+      //Jisie's from fridgify
+          // In order to change the data for an existing  item in our API, we need to provide the user with a way to edit the existing values. This means we will show the user a form with the existing values already populated. Once again, we want our data to be our point of truth. So we make a HTTP GET request targeting the specific  item the user wants to edit to get the data that will be populated in the form. Once we have that data, we can build the form, populate the input fields with our data form the GET request and then append that form to the appropriate place on the DOM.
+          let editButton = document.createElement("button")
+          editButton.setAttribute("id", `editInterestsButtonid#--${interestsObject.id}`)
+          editButton.textContent = "Edit"
         editButton.addEventListener("click", () => {
-            console.log("edit button clicked")
-            form.renderEditForm()
-            
-              })
+          // let interestId = event.target.parentNode.id
+          let interestId = `${interestsObject.id}`
+          // let foodId = interestId.split("--")[1]
+          dataManager.seeksInterestsId(interestId)
+          .then(response => {
+            console.log(response)
+            // foodEditForm.createAndAppendForm(articleId, response)
+          })
+        })
+
+
+
+
+
 
       let deleteinterestsButton = document.createElement("button")
       deleteinterestsButton.setAttribute("id", `deleteinterestsid#--${interestsObject.id}`)

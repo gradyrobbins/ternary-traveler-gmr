@@ -158,21 +158,16 @@ formHeader.textContent = "Add a new interest"
 },
 
 // user would like to be able to edit the point of interest by adjusting the cost and adding a review.
-renderEditForm () {
+renderEditForm (obj) {
 
-    console.log("render Edit form")
-    let editFormDiv = document.getElementById("editForm");
+    console.log("render Edit form using: ")
+    console.log(obj)
+
+    // let editFormDiv = document.getElementById("editForm");
+    // editFormDiv.innerHTML = `bloop : string interpolation using obj keys`
 
 
-    editFormDiv.innerHTML = "edit form build out"
 
-    let editinterestsId = event.target.id.split("--")[1]
-            dataManager.seeksInterestsId(editinterestsId)
-
-            // .then(response => {
-            //       console.log("response" , response)
-            //     // interestsList.newsify()
-                // })
 
 
 },

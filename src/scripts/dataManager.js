@@ -1,5 +1,8 @@
 // Grady
 // Grab some data
+import form from "./form"
+
+
 const dataManager = {
 
     // FETCH CALLS
@@ -48,7 +51,7 @@ const dataManager = {
       seeksInterestsId(id) {
         return fetch(`http://localhost:8088/interests/${id}`)
         .then(response => response.json())
-        .then(response => console.log(response))
+        // .then(response => form.renderEditForm(response))
       },
       // //STAGE 2 - Do some stuff to the item.
       thingsChange(interestObjToEdit, editedObject) {
