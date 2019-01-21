@@ -211,9 +211,9 @@ handleAddNewInterest (event) {
       .then(() => {
           //   clear the form
             eventListeners2.clearForm();
-            console.log("form has just beencleared via eventlisteners.clearForm()")
+            // console.log("form has just beencleared via eventlisteners.clearForm()")
             // now that a new entry has been posted, call the newsify() to re-render the DOM
-      console.log("now i want to re-render the DOM but having trouble getting the funciton to work")
+    //   console.log("now i want to re-render the DOM but having trouble getting the funciton to work")
               interestsList.newsify()
 
 
