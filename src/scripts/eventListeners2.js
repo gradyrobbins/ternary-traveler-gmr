@@ -26,18 +26,9 @@ const eventListeners2 = {
         );
     },
 
-    // deleteNewsButton() {
-    //         let deleteNewsButton = document.getElementById()
-    //     }
-
-
         clearForm() {
 
                 let inputFields = document.querySelectorAll(".inputField")
-
-
-                console.log(" inputFields : ", inputFields)
-                "other", "inputField"
 
                 inputFields.forEach(el => {
                       el.value="";

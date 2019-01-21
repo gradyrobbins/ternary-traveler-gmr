@@ -208,9 +208,19 @@ handleAddNewInterest (event) {
 
 // 3. Call the method(postnewInterest) with the fetch request to POST to the API and pass it the object we created in the previous step
       dataManager.postNewInterest(newInterest)
-      // now that a new entry has been posted, call the newsify() to re-render the DOM
-      eventListeners2.clearForm();
-      interestsList.newsify()
+      .then(() => {
+          //   clear the form
+            eventListeners2.clearForm();
+            console.log("form has just beencleared via eventlisteners.clearForm()")
+            // now that a new entry has been posted, call the newsify() to re-render the DOM
+      console.log("now i want to re-render the DOM but having trouble getting the funciton to work")
+              interestsList.newsify()
+
+
+      }
+
+
+      )
 
 // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
 
