@@ -33,9 +33,19 @@ const eventListeners2 = {
 
         clearForm() {
 
-                let inputFields = document.querySelectorAll("inputField")
-                inputFields.value = ""
-                // inputFields.innerHTML = ""
+                let inputFields = document.querySelectorAll(".inputField")
+
+
+                console.log(" inputFields : ", inputFields)
+                "other", "inputField"
+
+                inputFields.forEach(el => {
+                      el.value="";
+                      el.innerHTML="";
+                    })
+
+
+
             }
 
     }

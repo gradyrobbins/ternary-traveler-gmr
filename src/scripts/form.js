@@ -39,7 +39,7 @@ formHeader.textContent = "Add a new interest"
         let NameInput = document.createElement("input")
             NameInput.setAttribute("id", "interest__name__input")
             NameInput.setAttribute("name", "interest__name__input")
-            NameInput.setAttribute("other", "inputField")
+            NameInput.setAttribute("class", "inputField")
 
     NameField.appendChild(NameLabel)
     NameField.appendChild(NameInput)
@@ -52,7 +52,7 @@ formHeader.textContent = "Add a new interest"
         let DescriptionInput = document.createElement("input")
             DescriptionInput.setAttribute("id", "interest__description__input")
             DescriptionInput.setAttribute("name", "interest__description__input")
-            DescriptionInput.setAttribute("other", "inputField")
+            DescriptionInput.setAttribute("class", "inputField")
 
     DescriptionField.appendChild(DescriptionLabel)
     DescriptionField.appendChild(DescriptionInput)
@@ -65,7 +65,7 @@ formHeader.textContent = "Add a new interest"
         let CostInput = document.createElement("input")
             CostInput.setAttribute("id", "interest__cost__input")
             CostInput.setAttribute("name", "interest__cost__input")
-            CostInput.setAttribute("other", "inputField")
+            CostInput.setAttribute("class", "inputField")
 
     CostField.appendChild(CostLabel)
     CostField.appendChild(CostInput)
@@ -103,7 +103,7 @@ formHeader.textContent = "Add a new interest"
         let ReviewInput = document.createElement("input")
             ReviewInput.setAttribute("id", "interest__review__input")
             ReviewInput.setAttribute("name", "interest__review__input")
-            ReviewInput.setAttribute("other", "inputField")
+            ReviewInput.setAttribute("class", "inputField")
 
     ReviewField.appendChild(ReviewLabel)
     ReviewField.appendChild(ReviewInput)
@@ -210,7 +210,7 @@ handleAddNewInterest (event) {
       dataManager.postNewInterest(newInterest)
       // now that a new entry has been posted, call the newsify() to re-render the DOM
       eventListeners2.clearForm();
-    //   interestsList.newsify()
+      interestsList.newsify()
 
 // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
 
