@@ -73,27 +73,37 @@ formHeader.textContent = "Add a new interest"
     let placeTypeSelect = document.createElement("select");
     placeTypeSelect.setAttribute("id", "mySelect");
 
-    let kathmanduOption = document.createElement("option");
+    dataManager.getAllPlaces().then(places => {
+        let placesOptionFragment = document.createDocumentFragment()
+        places.forEach(place => {
+            let placesTypeOption = document.createElement("option")
+            placesTypeOption.setAttribute("value", place.id)
+            placesTypeOption.textContent = place.name
+            placesOptionFragment.appendChild(placesTypeOption)
+            placeTypeSelect.appendChild(placesOptionFragment)
+        })
+    })
+    // let kathmanduOption = document.createElement("option");
     // kathmanduOption.setAttribute("value", `${places[0].id}`)
     // kathmanduOption.textContent = `${places[0].name}`
-    kathmanduOption.setAttribute("value", "1")
-    kathmanduOption.textContent = "Kathmandu"
+    // kathmanduOption.setAttribute("value", "1")
+    // kathmanduOption.textContent = "Kathmandu"
 
-    let dhakaOption = document.createElement("option");
+    // let dhakaOption = document.createElement("option");
     // dhakaOption.setAttribute("value", `${places[1].id}`)
     // dhakaOption.textContent = `${places[1].name}`
-    dhakaOption.setAttribute("value", "2")
-    dhakaOption.textContent = "Dhaka"
+    // dhakaOption.setAttribute("value", "2")
+    // dhakaOption.textContent = "Dhaka"
 
-    let mumbaiOption = document.createElement("option");
+    // let mumbaiOption = document.createElement("option");
     // mumbaiOption.setAttribute("value", `${places[2].id}`)
     // mumbaiOption.textContent = `${places[2].name}`
-    mumbaiOption.setAttribute("value", "3")
-    mumbaiOption.textContent = "Mumbai"
+    // mumbaiOption.setAttribute("value", "3")
+    // mumbaiOption.textContent = "Mumbai"
 
-    placeTypeSelect.appendChild(mumbaiOption)
-    placeTypeSelect.appendChild(dhakaOption)
-    placeTypeSelect.appendChild(kathmanduOption)
+    // placeTypeSelect.appendChild(mumbaiOption)
+    // placeTypeSelect.appendChild(dhakaOption)
+    // placeTypeSelect.appendChild(kathmanduOption)
 
     let ReviewField = document.createElement("fieldset")
         let ReviewLabel = document.createElement("label")
@@ -142,7 +152,7 @@ formHeader.textContent = "Add a new interest"
     // .then(response => response.json())
     // .then(places => {
     //     console.log(places)
-        // let productTypesOptionFragment = document.createDocumentFragment()
+        // let placesOptionFragment = document.createDocumentFragment()
         // productTypes.forEach(productType => {
         //     let productTypeOption = document.createElement("option")
         //     productTypeOption.setAttribute("value", productType.productTypeId)
