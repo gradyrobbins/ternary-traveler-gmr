@@ -41,8 +41,6 @@ const interestsList = {
 
 
 
-    //   outputArticle.appendChild(interestsDocFragment)
-
     })
   }
 }

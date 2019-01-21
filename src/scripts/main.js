@@ -4,13 +4,13 @@ console.log("Hello main.js")
 import dataManager from "./dataManager";
 import eventListeners2 from "./eventListeners2"
 // import form from "./form"
-// import interestsList from "./interestsList"
-import domBuilder from "./domBuilder"
+import interestsList from "./interestsList"
+// import domBuilder from "./domBuilder"
 
 
 eventListeners2.renderForm();
-domBuilder.appendInterests();
-domBuilder.appendPlaces();
+// domBuilder.appendInterests();
+// domBuilder.appendPlaces();
 
 // dataManager.getAllPlaces()
 // .then(response =>
@@ -19,7 +19,7 @@ domBuilder.appendPlaces();
 
 
 dataManager.getAllInterests();
-// interestsList.newsify()
+interestsList.newsify()
 
 
 
