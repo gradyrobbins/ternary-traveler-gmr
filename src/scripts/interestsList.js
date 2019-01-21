@@ -3,8 +3,10 @@
 
 // To get the data, we will use the dataManager component.
 import dataManager from "./dataManager"
-// To build the HTML for each object in the array of places(which is what the data coming from the API becomes once we parse it), we will use the food component.
+
+// To build the HTML for each object in the array of interests(which is what the data coming from the API becomes once we parse it), we will use the interests component.
 import interests from "./interests"
+
 
 const interestsList = {
   newsify(){
@@ -40,8 +42,6 @@ const interestsList = {
 
 
 
-
-    //   outputArticle.appendChild(interestsDocFragment)
 
     })
   }

@@ -4,6 +4,7 @@
 import dataManager from "./dataManager";
 import eventListeners2 from "./eventListeners2";
 import interestsEditForm from "./interestsEditForm"
+import interestsList from "./interestsList";
 
 
 // This module will build a form and append it to the DOM. The form will contain input fields for a user to add a new interest to their places-list and a button with an event listener that will listen for the click
@@ -38,7 +39,7 @@ formHeader.textContent = "Add a new interest"
         let NameInput = document.createElement("input")
             NameInput.setAttribute("id", "interest__name__input")
             NameInput.setAttribute("name", "interest__name__input")
-            NameInput.setAttribute("other", "inputField")
+            NameInput.setAttribute("class", "inputField")
 
     NameField.appendChild(NameLabel)
     NameField.appendChild(NameInput)
@@ -51,7 +52,7 @@ formHeader.textContent = "Add a new interest"
         let DescriptionInput = document.createElement("input")
             DescriptionInput.setAttribute("id", "interest__description__input")
             DescriptionInput.setAttribute("name", "interest__description__input")
-            DescriptionInput.setAttribute("other", "inputField")
+            DescriptionInput.setAttribute("class", "inputField")
 
     DescriptionField.appendChild(DescriptionLabel)
     DescriptionField.appendChild(DescriptionInput)
@@ -64,7 +65,7 @@ formHeader.textContent = "Add a new interest"
         let CostInput = document.createElement("input")
             CostInput.setAttribute("id", "interest__cost__input")
             CostInput.setAttribute("name", "interest__cost__input")
-            CostInput.setAttribute("other", "inputField")
+            CostInput.setAttribute("class", "inputField")
 
     CostField.appendChild(CostLabel)
     CostField.appendChild(CostInput)
@@ -102,7 +103,7 @@ formHeader.textContent = "Add a new interest"
         let ReviewInput = document.createElement("input")
             ReviewInput.setAttribute("id", "interest__review__input")
             ReviewInput.setAttribute("name", "interest__review__input")
-            ReviewInput.setAttribute("other", "inputField")
+            ReviewInput.setAttribute("class", "inputField")
 
     ReviewField.appendChild(ReviewLabel)
     ReviewField.appendChild(ReviewInput)
@@ -186,6 +187,7 @@ handleAddNewInterest (event) {
     let interestReview = document.querySelector("#interest__review__input").value
     // console.log("interestName")
     // console.log(interestName)
+
     // 2. Create a new object with the same structure we have been using throughout the application to represent a news item:
     // {
         //   name: "user input name",
@@ -206,9 +208,21 @@ handleAddNewInterest (event) {
 
 // 3. Call the method(postnewInterest) with the fetch request to POST to the API and pass it the object we created in the previous step
       dataManager.postNewInterest(newInterest)
+      .then(() => {
+          //   clear the form
+            eventListeners2.clearForm();
+            // console.log("form has just beencleared via eventlisteners.clearForm()")
+            // now that a new entry has been posted, call the newsify() to re-render the DOM
+    //   console.log("now i want to re-render the DOM but having trouble getting the funciton to work")
+              interestsList.newsify()
+
+
+      }
+
+
+      )
 
 // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
-      eventListeners2.clearForm();
 
 
 
@@ -233,18 +247,5 @@ handleAddNewInterest (event) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-// }
-
-
-// }
 
 export default form

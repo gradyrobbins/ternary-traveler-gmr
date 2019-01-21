@@ -16,19 +16,27 @@ const eventListeners2 = {
         let formsPlaceholder = document.getElementById("formsPlaceholder");
         formsPlaceholder.addEventListener("click", () => {
             // console.log("click formsPlaceholder")
+            let bloop = document.getElementById("forms")
+            while (bloop.firstChild) {
+                bloop.removeChild(bloop.firstChild);
+              }
+
             form.renderForm();
             }
         );
     },
 
-    // deleteNewsButton() {
-    //         let deleteNewsButton = document.getElementById()
-    //     }
-
-
         clearForm() {
 
-                document.querySelectorAll("inputField").value = "";
+                let inputFields = document.querySelectorAll(".inputField")
+
+                inputFields.forEach(el => {
+                      el.value="";
+                      el.innerHTML="";
+                    })
+
+
+
             }
 
     }

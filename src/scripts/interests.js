@@ -1,7 +1,7 @@
 // author : Grady R. and lots of credit due to Jisie David/fridgify app
 //Given a single  object, this component builds out the HTML and returns it
 import dataManager from "./dataManager"
-// import newsList from "./newsList";
+import interestsList from "./interestsList";
 import form from "./form"
 
 const interests = {
@@ -74,9 +74,9 @@ const interests = {
           alert("delete button clicked, are you sure you want to delete this entry?")
           let interestsId = event.target.id.split("--")[1]
           dataManager.deleteInterestItem(interestsId)
-        //   .then(response => {
-        //         interestsList.newsify()
-        //       })
+          .then(response => {
+                interestsList.newsify()
+              })
             })
 
     interestsArticle.appendChild(interestsName);
