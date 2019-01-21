@@ -6,6 +6,7 @@ import dataManager from "./dataManager"
 // To build the HTML for each object in the array of places(which is what the data coming from the API becomes once we parse it), we will use the food component.
 import interests from "./interests"
 
+
 const interestsList = {
   newsify(){
     // 1. Get data

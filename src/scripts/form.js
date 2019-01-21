@@ -4,6 +4,7 @@
 import dataManager from "./dataManager";
 import eventListeners2 from "./eventListeners2";
 import interestsEditForm from "./interestsEditForm"
+import interestsList from "./interestsList";
 
 
 // This module will build a form and append it to the DOM. The form will contain input fields for a user to add a new interest to their places-list and a button with an event listener that will listen for the click
@@ -186,6 +187,7 @@ handleAddNewInterest (event) {
     let interestReview = document.querySelector("#interest__review__input").value
     // console.log("interestName")
     // console.log(interestName)
+
     // 2. Create a new object with the same structure we have been using throughout the application to represent a news item:
     // {
         //   name: "user input name",
@@ -206,9 +208,11 @@ handleAddNewInterest (event) {
 
 // 3. Call the method(postnewInterest) with the fetch request to POST to the API and pass it the object we created in the previous step
       dataManager.postNewInterest(newInterest)
+      // now that a new entry has been posted, call the newsify() to re-render the DOM
+      eventListeners2.clearForm();
+    //   interestsList.newsify()
 
 // Notice the import statement at the top of the module so I can call a method in the dataCollection module.
-      eventListeners2.clearForm();
 
 
 
@@ -233,18 +237,5 @@ handleAddNewInterest (event) {
   }
 }
 
-
-
-
-
-
-
-
-
-
-// }
-
-
-// }
 
 export default form
