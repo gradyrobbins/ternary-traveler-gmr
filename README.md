@@ -1,3 +1,6 @@
+### don't forget!
+```cd api``` ```json-server -p 8088 -w database.json```
+
 # Ternary Traveler
 
 The Ternary Traveler
