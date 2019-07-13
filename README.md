@@ -1,5 +1,5 @@
-### don't forget!
-```cd api``` ```json-server -p 8088 -w database.json```
+### spinning up this project:
+```cd src/lib``` ```grunt``` in your browser's address bar:```localhost:8080```
 
 # Ternary Traveler
 
