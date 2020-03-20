@@ -13,7 +13,7 @@
     "@babel/preset-env": "^7.1.0",
     "babelify": "^10.0.0",
     "browserify": "^16.2.3",
-    "grunt": "^1.0.4",
+    "grunt": "^1.1.0",
     "grunt-bg-shell": "^2.3.3",
     "grunt-browserify": "^5.3.0",
     "grunt-contrib-watch": "^1.1.0",
@@ -23,9 +23,11 @@
   },
   "description": "",
   "dependencies": {
+    "acorn": "^7.1.1",
     "eslint-utils": "^1.4.2",
     "grunt-http-server": "^2.1.0",
     "lodash": "^4.17.15",
-    "mem": "^5.1.1"
+    "mem": "^5.1.1",
+    "minimist": "^1.2.5"
   }
 }
