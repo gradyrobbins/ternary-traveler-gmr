@@ -24,6 +24,7 @@
   "description": "",
   "dependencies": {
     "acorn": "^7.1.1",
+    "ecstatic": "^4.1.4",
     "eslint-utils": "^1.4.2",
     "grunt-http-server": "^2.1.0",
     "kind-of": "^6.0.3",
