@@ -26,6 +26,7 @@
     "acorn": "^7.1.1",
     "eslint-utils": "^1.4.2",
     "grunt-http-server": "^2.1.0",
+    "kind-of": "^6.0.3",
     "lodash": "^4.17.15",
     "mem": "^5.1.1",
     "minimist": "^1.2.5"
